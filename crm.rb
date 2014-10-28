@@ -1,3 +1,4 @@
+require_relative 'contacts'
 require 'sinatra'
 
 get '/' do
