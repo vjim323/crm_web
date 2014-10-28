@@ -10,13 +10,13 @@ get '/' do
 end
 
 get '/contacts' do
-	# @contacts = []
-	# @contacts << Contacts.new("Vincent", "Jim", "vjim323@gmail.com", "None")
-	# @contacts << Contacts.new("Kent", "Jim", "kjim@gmail.com", "None")
-
 	erb :contacts
 end
 
-# gets '/contacts/new' do
-	 
-# end
+get '/contacts/new' do
+	 erb :new_contact
+end
+
+post '/contacts' do
+	puts params
+end
