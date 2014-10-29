@@ -1,7 +1,22 @@
 <h1>All Contacts</h1>
 
-<ul>
-<% $rolodex.contacts.each do |contact| %>
-	<li><%= contact.first_name %> <%= contact.last_name %> <%= contact.email %> <%= contact.notes %> </li>
-<% end %>
-</ul>
+<table>
+	<tr>
+		<th> ID </th>
+		<th> First name </th>
+		<th> Last name </th>
+		<th> Email </th>
+		<th> Notes </th>
+	</tr>
+
+	<% $rolodex.contacts.each do |contact| %>
+		<tr>
+			<td> <%= contact.id %> </td>
+			<td> <%= contact.first_name %> </td>
+			<td> <%= contact.last_name %> </td>
+			<td> <%= contact.email %> </td>
+			<td> <%= contact.notes %> </td>
+		</tr>
+	<% end %>
+</table>
+
