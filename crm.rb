@@ -3,7 +3,6 @@ require_relative 'contact'
 require 'sinatra'
 
 @@rolodex = Rolodex.new
-@@rolodex.add_contact(Contacts.new("Vincent", "Jim", "vjim323@gmail.com", "nothing"))
 
 get '/' do
 	erb :index

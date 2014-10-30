@@ -11,7 +11,7 @@
 
 	<% @@rolodex.contacts.each do |contact| %>
 		<tr>
-			<td> <%= contact.id %> </td>
+			<td><a href="/contacts/<%= contact.id %>"> <%= contact.id %> </a></td>
 			<td> <%= contact.first_name %> </td>
 			<td> <%= contact.last_name %> </td>
 			<td> <%= contact.email %> </td>
