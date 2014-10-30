@@ -19,11 +19,11 @@ end
 
 post '/contacts' do
 	new_contact = Contacts.new(params[:first_name], params[:last_name], params[:email], params[:notes])
-	$rolodex.add_contact(new_contact)
+	@@rolodex.add_contact(new_contact)
 	redirect to('/contacts')
 end
 
-get '/contacts/1000' do
-	@contact = @@rolodex.find(1000)
+get '/contacts/:id' do
+	@contact = @@rolodex.find(params[:id].to_i)
 	erb :show_contact
 end
