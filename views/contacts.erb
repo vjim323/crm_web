@@ -9,7 +9,7 @@
 		<th> Notes </th>
 	</tr>
 
-	<% @@rolodex.contacts.each do |contact| %>
+	<% @contacts.each do |contact| %>
 		<tr>
 			<td><a href="/contacts/<%= contact.id %>"> <%= contact.id %> </a></td>
 			<td> <%= contact.first_name %> </td>

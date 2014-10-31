@@ -25,6 +25,7 @@ get '/' do
 end
 
 get '/contacts' do
+	@contacts = Contacts.all
 	erb :contacts
 end
 
@@ -33,8 +34,13 @@ get '/contacts/new' do
 end
 
 post '/contacts' do
-	new_contact = Contacts.new(params[:first_name], params[:last_name], params[:email], params[:notes])
-	@@rolodex.add_contact(new_contact)
+	new_contact = Contacts.create(
+		:first_name => params[:first_name],
+		:last_name => params[:last_name],
+		:email => params[:email],
+		:notes => params[:notes]
+		)
+
 	redirect to('/contacts')
 end
 
